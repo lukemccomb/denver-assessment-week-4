@@ -1,13 +1,13 @@
 class DogHTMLPage
-    def initialize(name)
-      @name = name
+    def initialize(names)
+      @names = names
     end
 
     def title
       title_h1 = ""
-      @name.select do |name, dog|
-        title_h1 << dog
+      @names.select do |name, dog|
+        title_h1 << "#{dog}"
+        "<h1>" + title_h1 + "</h1>"
       end
-
     end
 end
